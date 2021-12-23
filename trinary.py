@@ -185,8 +185,8 @@ class StateVector:
         '''
         matrix = [
             [1, 0, 0],
-            [0, math.exp(1j*theta), 0],
-            [0, 0, math.exp(1j*phi)]
+            [0, math.cos(theta) + 1j*math.sin(theta), 0],
+            [0, 0, math.cos(phi) + 1j*math.sin(theta)]
         ]
         self.single_qutrit_gate(qutrit, matrix)
 
